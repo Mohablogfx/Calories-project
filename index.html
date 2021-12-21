@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src=""></script>
+</head>
+<body>
+    <label for="compte">Création de compte :</label>
+    <progress id="compte" value="" max="100"> 60% </progress>
+
+    <div>
+        <ul></ul>
+        <h3></h3>
+        <span></span>
+        <h3></h3>
+    </div>
+
+    <script>
+        // console.log(typeof(Math.floor(Math.random()*11)));
+        var valeur = prompt('Donnerfk')
+        var progress = document.getElementById('compte');
+        window.onload = function(){
+            var inter = setInterval(() => {
+                if(progress.value == 101){
+                    progress.value = 0;
+                }
+                progress.value = progress.value + 10
+            }, 1000);
+
+            if (progress.value == 100) {
+                clearInterval(inter);
+            }
+        }
+
+        var tab = [1,6,9];
+        tab[2] = valeur;
+        tab.forEach(index => {
+            console.log(index)
+        });
+        
+    </script>
+</body>
+</html>
